@@ -1,0 +1,35 @@
+Não podem ser instanciadas. Para instanciar, devemos criar primeiro uma classe filha não abstrata.
+
+
+Uma classe abstrata representa um conceito, algo abstrato, e o compilador não permite instanciar um objeto dessa classe. Para instanciar é preciso criar primeiro uma classe filha não abstrata.
+_________________________________________________________________________________________________________________________________________________________________________________________________
+
+
+1)O que é verdade sobre classes abstratas? 
+
+Podem ter atributos?
+
+R: Correto, podemos sim ter atributos! Uma classes abstrata é uma classe normal, só não pode instanciar e pode ter métodos abstratos. O resto continua valendo!
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Podem ter métodos concretos (com implementação)?
+
+
+R: Correto, como podem ter atributos também podem ter métodos concretos!
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Podem ter métodos abstratos (sem implementação)?
+
+
+R: Correto, como vimos uma classe abstrata pode ter métodos sem implementação. Dessa forma obrigamos um filho implementar o método.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Não podem ser instanciadas?
+
+
+R: Correto, pois o que é abstrato (a classe) não pode se tornar concreto (objeto). Por isso não podemos instanciar objetos de uma classe abstrata.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+_________________________________________________________________________________________________________________________________________________________________________________________________

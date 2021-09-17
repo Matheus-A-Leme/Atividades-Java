@@ -1,0 +1,11 @@
+Ela é um contrato onde quem assina se responsabiliza por implementar esses métodos (cumprir o contrato).
+
+___________________________________________________________________________________________________________
+
+Podemos estender apenas uma classe abstrata, mas podemos implementar várias interfaces.
+
+___________________________________________________________________________________________________________
+
+Todos os métodos de uma interface são abstratos, os de uma classe abstrata podem não ser.
+
+____________________________________________________________________________________________________________

@@ -1,0 +1,175 @@
+------------------------------------------------------------------------------------------------------------------ JAVA OO ------------------------------------------------------------------------------------------------------------------
+
+- MÉTODOS - : Para criar um método é preciso definir um retorno que no caso seria um void, colocar também um encapsulamento que seria a privacidade do método como public/private/protected e por último  decidir se colocar parâmetros.
+
+Exemplos: 
+
+	1º Método Sem Parâmetros:
+	
+	public void deposita(){
+	
+	}
+------------------------------------------------------------------------------------------------------- 
+	2º Método Com Parâmetros:
+	
+	public void deposita(double valor, int numero){
+		this.saldo += valor; 
+	}
+------------------------------------------------------------------------------------------------------- 
+	3º Método sendo Booleano com Parâmetros:
+
+	public boolean saca(double valor){
+		if(this.saldo >= valor) { 
+			this.saldo -= valor;	
+			return true;
+		}
+		else{
+			return false;	
+		}
+	}
+------------------------------------------------------------------------------------------------------- 
+____________________________________________________________________________________________________________________________________________________________________________________
+
+- THIS - : Usamos o this dentro de um método para acessar um atributo. Não é Necessário pois o this é opcional.
+	
+Exemplo 1º: 
+
+class Conta {
+
+        double saldo;
+        int numero;
+
+        void deposita(double valor) {
+            this.saldo = this.saldo + valor;
+        }
+}
+-------------------------------------------------------------------------------------------------------
+Exemplo 2º: 
+
+public Conta(double saldo, int agencia, int numero,Cliente titular){
+		
+		this.saldo = saldo;
+		this.agencia= agencia; 
+		this.numero = numero;
+		this.titular = titular;
+		
+}
+
+____________________________________________________________________________________________________________________________________________________________________________________
+- CÓDIGO - : 
+
+public class Endereco {
+
+    String logradouro;
+    String complemento;
+    String numero;
+    String bairro;
+    String cidade;
+    String cep;
+}
+
+public class Pessoa {
+
+    String nome;
+    String cpf;
+    int idade;
+    Endereco endereco;
+
+}
+
+public class Programa {
+
+    public static void main(String args[]) {
+
+        Pessoa p = new Pessoa();
+        p.nome = "Paulo";
+        p.endereco.logradouro  = "Aveninda XYZ";
+    }
+}
+
+
+Duas Opções que contém a alteração que fará o código funcionar em tempo de execução:
+
+1º Opção: 
+
+public class Pessoa {
+
+    String nome;
+    String cpf;
+    int idade;
+    Endereco endereco = new Endereco();
+}
+
+2º Opção: 
+
+public class Programa {
+
+    public static void main(String args[]) {
+
+        Pessoa p = new Pessoa();
+        p.nome = "Paulo";
+        p.endereco = new Endereco();
+        p.endereco.logradouro  = "Aveninda XYZ";
+    }
+}
+
+____________________________________________________________________________________________________________________________________________________________________________________
+
+
+- GETTERS E SETTERS - : 
+	CLASSE:
+
+	public class Aluno {
+    		private String nome;
+    		private String matricula;
+	}
+
+
+DEVE CONTER OS SEGUINTES GETTERS E SETTERS:
+
+	public String getNome(){
+   		return this.nome;
+	}
+
+	public String getMatricula(){
+   		return this.matricula;
+	}
+
+	public void setMatricula(String matricula){
+   		this.matricula = matricula;
+	}
+
+	public void setNome(String nome){
+   		this.nome = nome;
+	}
+____________________________________________________________________________________________________________________________________________________________________________________
+
+- STATIC - : Comando para colocar em um atributo para que sempre que criar um novo objeto manter o valor correto, envés de sempre aumentar só um.
+
+EXEMPLO:
+
+----------------  ERRADO:  ----------------
+	
+	public class Jogador {
+    	     	private int total = 0;
+
+        public Jogador(//atributos){
+       		       total++;
+    	}
+	
+}
+
+
+----------------  CORRETO:  ----------------
+
+
+public class Jogador {
+    	private static int total = 0;
+
+        public Jogador(//atributos){
+       		       total++;
+    	}
+	
+}
+
+____________________________________________________________________________________________________________________________________________________________________________________
